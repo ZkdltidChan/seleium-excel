@@ -1,0 +1,16 @@
+version: '3'
+services:
+  spider:
+    build: .
+    volumes:
+      - ".:/code"
+    depends_on:
+      - chrome
+
+  selenium:
+    # image: selenium/standalone-chrome-debug:3.7.1
+    image: seleniarm/standalone-chromium:latest # for amd64(mac m1 chip)
+    ports:
+      - 4444:4444
+      - 5900:5900
+    shm_size: 2g
