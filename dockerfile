@@ -9,4 +9,4 @@ ADD . /code
 
 VOLUME /code
 
-CMD ["python", "main2.py"]
+CMD ["python", "main3.py"]
